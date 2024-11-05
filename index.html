@@ -12,67 +12,78 @@
 </body>
 </html>
 
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form Login</title>
+    <title>Promosi Kost</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            margin: 0;
+            min-height: 100vh;
         }
-        .login-container {
+        .kost-container {
             background-color: #fff;
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            width: 300px;
-        }
-        h2 {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        input[type="text"], input[type="password"] {
+            max-width: 600px;
             width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #ccc;
-            border-radius: 5px;
         }
-        input[type="submit"] {
+        .kost-image {
             width: 100%;
-            padding: 10px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+        .kost-details {
+            margin-bottom: 10px;
+        }
+        .kost-details h2 {
+            margin: 0 0 10px;
+        }
+        .kost-details p {
+            margin: 5px 0;
+        }
+        .contact-info {
+            margin-top: 20px;
+        }
+        .contact-info a {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 15px;
             background-color: #007bff;
             color: #fff;
-            border: none;
+            text-decoration: none;
             border-radius: 5px;
-            cursor: pointer;
+            text-align: center;
         }
-        input[type="submit"]:hover {
+        .contact-info a:hover {
             background-color: #0056b3;
         }
     </style>
 </head>
 <body>
 
-<div class="login-container">
-    <h2>Login</h2>
-    <form action="proses_login.php" method="POST">
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required>
-
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required>
-
-        <input type="submit" value="Login">
-    </form>
+<div class="kost-container">
+    <img src="kost-image.jpg" alt="Gambar Kost" class="kost-image">
+    <div class="kost-details">
+        <h2>Kost Nyaman di Pusat Kota</h2>
+        <p><strong>Lokasi:</strong> Jalan Merdeka No. 123, Jakarta</p>
+        <p><strong>Fasilitas:</strong> AC, WiFi, Kamar Mandi Dalam, Parkir Luas</p>
+        <p><strong>Harga:</strong> Rp 1.500.000/bulan</p>
+    </div>
+    <div class="contact-info">
+        <p>Hubungi kami untuk info lebih lanjut:</p>
+        <a href="tel:+6281234567890">Hubungi: +62 812-3456-7890</a>
+    </div>
 </div>
 
 </body>

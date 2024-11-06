@@ -1,4 +1,4 @@
-/* Basic reset */
+/* Reset */
 * {
     margin: 0;
     padding: 0;
@@ -6,9 +6,8 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
-    color: #333;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -16,37 +15,51 @@ body {
     margin: 0;
 }
 
-/* Container styling */
+/* Main Container */
 .kost-container {
     background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     overflow: hidden;
     max-width: 600px;
     margin: 20px;
-    transition: transform 0.3s;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Image styling */
+/* Image Styling */
 .kost-image {
     width: 100%;
     height: auto;
+    border-bottom: 2px solid #00f2fe;
 }
 
-/* Content styling */
+/* Details Section */
 .kost-details, .contact-info {
     padding: 20px;
 }
 
 .kost-details h2 {
-    font-size: 1.5em;
-    color: #2c3e50;
-    margin-bottom: 10px;
+    font-size: 1.7em;
+    color: #34495e;
+    margin-bottom: 12px;
+    font-weight: bold;
 }
 
 .kost-details p {
     margin: 8px 0;
     line-height: 1.6;
+    color: #555;
+}
+
+.kost-details p strong {
+    color: #2c3e50;
+}
+
+/* Contact Info Section */
+.contact-info {
+    border-top: 1px solid #f1f1f1;
+    padding-top: 15px;
+    text-align: center;
 }
 
 .contact-info p {
@@ -54,34 +67,42 @@ body {
     margin-bottom: 8px;
 }
 
-/* Button styling */
 .contact-info a {
     display: inline-block;
-    padding: 10px 20px;
+    padding: 10px 25px;
     background-color: #2ecc71;
     color: #ffffff;
     text-decoration: none;
-    border-radius: 4px;
+    border-radius: 50px;
     font-weight: bold;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0px 4px 8px rgba(46, 204, 113, 0.4);
+}
+
+/* Icon Styling */
+.contact-info a::before {
+    content: "📞 ";
+    margin-right: 8px;
 }
 
 .contact-info a:hover {
     background-color: #27ae60;
+    box-shadow: 0px 6px 12px rgba(39, 174, 96, 0.5);
 }
 
-/* Hover effect on container */
+/* Card Hover Effect */
 .kost-container:hover {
-    transform: scale(1.02);
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
 }
 
-/* Responsive layout */
+/* Responsive Design */
 @media (max-width: 600px) {
     .kost-container {
         max-width: 90%;
         margin: 10px;
     }
     .kost-details h2 {
-        font-size: 1.2em;
+        font-size: 1.4em;
     }
 }

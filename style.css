@@ -1,59 +1,87 @@
+/* Basic reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
-    color: aquamarine;
-    background-color: #333;
-  }
+}
 
-  body {
+body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    margin: 0;
-    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     min-height: 100vh;
+    margin: 0;
 }
-div {
+
+/* Container styling */
 .kost-container {
-    background-color: #fff;
-    padding: 20px;
+    background-color: #ffffff;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
     max-width: 600px;
-    width: 100%;
+    margin: 20px;
+    transition: transform 0.3s;
 }
+
+/* Image styling */
 .kost-image {
     width: 100%;
-    border-radius: 8px;
-    margin-bottom: 15px;
+    height: auto;
 }
-.kost-details {
+
+/* Content styling */
+.kost-details, .contact-info {
+    padding: 20px;
+}
+
+.kost-details h2 {
+    font-size: 1.5em;
+    color: #2c3e50;
     margin-bottom: 10px;
 }
-.kost-details h2 {
-    margin: 0 0 10px;
-}
+
 .kost-details p {
-    margin: 5px 0;
+    margin: 8px 0;
+    line-height: 1.6;
 }
-.contact-info {
-    margin-top: 20px;
+
+.contact-info p {
+    font-weight: bold;
+    margin-bottom: 8px;
 }
+
+/* Button styling */
 .contact-info a {
     display: inline-block;
-    margin-top: 10px;
-    padding: 10px 15px;
-    background-color: #007bff;
-    color: #fff;
+    padding: 10px 20px;
+    background-color: #2ecc71;
+    color: #ffffff;
     text-decoration: none;
-    border-radius: 5px;
-    text-align: center;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background-color 0.3s;
 }
+
 .contact-info a:hover {
-    background-color: #0056b3;
+    background-color: #27ae60;
 }
+
+/* Hover effect on container */
+.kost-container:hover {
+    transform: scale(1.02);
+}
+
+/* Responsive layout */
+@media (max-width: 600px) {
+    .kost-container {
+        max-width: 90%;
+        margin: 10px;
+    }
+    .kost-details h2 {
+        font-size: 1.2em;
+    }
 }

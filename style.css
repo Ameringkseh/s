@@ -223,19 +223,3 @@ body
     margin-bottom: 5px;
 }
  
-.header-kamarac
-{
-    background-color: dodgerblue;
-    color: white;
-}
- 
-.header-kamarkipas
-{
-    background-color:darkorange;
-    color: white;
-}
- 
-.tabel-harga ul
-{
-    list-style-type: none;
-}

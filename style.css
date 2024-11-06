@@ -13,6 +13,13 @@ nav {
     padding-left: 8%;
 }
 
+.logo {
+    color: white;
+    font-size: 35px;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
 body {
     font-family: 'Arial', sans-serif;
     background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);

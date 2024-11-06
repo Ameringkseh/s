@@ -148,4 +148,23 @@ body {
 
 .slide {
     display: none;
-    width: 100
+    width: 100%;
+}
+
+.slide-image {
+    width: 100%;
+    border-radius: 8px;
+    height: auto;
+    transition: opacity 1s ease-in-out;
+}
+
+/* Fade effect for slideshow */
+.fade {
+    animation: fade 1s ease-in-out;
+}
+
+@keyframes fade {
+    from { opacity: .4 } 
+    to { opacity: 1 }
+}
+

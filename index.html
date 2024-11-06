@@ -9,17 +9,48 @@
 </head>
 <body>
     <div class="kost-container">
-        <img src="kost-image.jpg" alt="Foto Kost Nyaman di Kota Tebing Tinggi" class="kost-image">
+        <!-- Slideshow Container -->
+        <div class="slideshow-container">
+            <div class="slide fade">
+                <img src="kost-image1.jpg" alt="Gambar Kost 1" class="slide-image">
+            </div>
+            <div class="slide fade">
+                <img src="kost-image2.jpg" alt="Gambar Kost 2" class="slide-image">
+            </div>
+            <div class="slide fade">
+                <img src="kost-image3.jpg" alt="Gambar Kost 3" class="slide-image">
+            </div>
+        </div>
+
+        <!-- Kost Details -->
         <div class="kost-details">
             <h2>Kost Nyaman di Pusat Kota</h2>
             <p><strong>Lokasi:</strong> Kota Tebing Tinggi, Sumatra Utara</p>
             <p><strong>Fasilitas:</strong> AC, Kasur, Lemari, TV, WiFi, Kamar Mandi Dalam (shower), WC duduk/jongkok, Parkir Luas</p>
             <p><strong>Harga:</strong> Rp 700.000 - 1.000.000/bulan</p>
         </div>
+        
+        <!-- Contact Info -->
         <div class="contact-info">
             <p>Hubungi kami untuk info lebih lanjut:</p>
             <a href="tel:+6281234567890">Hubungi: +62 812-3456-7890</a>
         </div>
     </div>
+
+    <!-- JavaScript for Slideshow -->
+    <script>
+        let slideIndex = 0;
+        function showSlides() {
+            let slides = document.getElementsByClassName("slide");
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}    
+            slides[slideIndex - 1].style.display = "block";  
+            setTimeout(showSlides, 3000); // Change image every 3 seconds
+        }
+        showSlides();
+    </script>
 </body>
 </html>

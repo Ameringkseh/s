@@ -17,6 +17,7 @@
     align-items: center;
     min-height: 100vh;
 }
+div {
 .kost-container {
     background-color: #fff;
     padding: 20px;
@@ -54,4 +55,5 @@
 }
 .contact-info a:hover {
     background-color: #0056b3;
+}
 }

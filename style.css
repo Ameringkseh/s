@@ -115,7 +115,8 @@ body {
 }
 .mockup-image:nth-child(2) {
     animation-delay: 0.4s;
-    
+    height: 400px;
+    width: 400px;
 .mockup-image:nth-child(3) {
     animation-delay: 0.6s;
     

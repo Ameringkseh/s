@@ -1,15 +1,18 @@
+/* Reset default margin, padding dan box-sizing */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Gaya umum untuk body */
 body {
     font-family: Arial, sans-serif;
     background-color: #3b82f6;
     color: white;
 }
 
+/* Navbar */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -21,6 +24,7 @@ body {
     font-size: 24px;
 }
 
+/* Navbar links */
 .navbar ul {
     display: flex;
     list-style: none;
@@ -33,6 +37,7 @@ body {
     font-size: 16px;
 }
 
+/* Tombol login dan get started */
 .login-btn, .get-started-btn {
     padding: 10px 20px;
     font-size: 16px;
@@ -42,9 +47,9 @@ body {
     background-color: white;
     margin-left: 8px;
     border-radius: 5px;
-    margin: 10px 10px 8px 670px;
 }
 
+/* Hero Section */
 .hero {
     text-align: center;
     padding: 100px 20px;
@@ -57,7 +62,7 @@ body {
 
 .hero h3 {
     font-size: 45px;
-    margin-bottom: 20px
+    margin-bottom: 20px;
 }
 
 .hero p {
@@ -65,6 +70,7 @@ body {
     margin-bottom: 30px;
 }
 
+/* Tombol CTA */
 .cta-btn {
     padding: 15px 30px;
     font-size: 18px;
@@ -75,6 +81,7 @@ body {
     border-radius: 5px;
 }
 
+/* Trusted by Section */
 .trusted-by {
     text-align: center;
     margin-top: 50px;
@@ -85,6 +92,7 @@ body {
     margin-bottom: 20px;
 }
 
+/* Logo Section */
 .logos {
     display: flex;
     justify-content: center;
@@ -94,4 +102,108 @@ body {
 .logos img {
     height: 400px;
     width: 400px;
+}
+
+/* Responsif: Tablet dan Lebih Kecil */
+@media screen and (max-width: 768px) {
+
+    /* Navbar */
+    .navbar h1 {
+        font-size: 20px;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar a {
+        font-size: 14px;
+    }
+
+    /* Tombol navbar */
+    .login-btn, .get-started-btn {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+
+    /* Hero Section */
+    .hero {
+        padding: 80px 20px;
+    }
+
+    .hero h2 {
+        font-size: 36px;
+    }
+
+    .hero h3 {
+        font-size: 32px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .cta-btn {
+        padding: 12px 24px;
+        font-size: 16px;
+    }
+
+    /* Trusted-by Section */
+    .logos img {
+        height: 300px;
+        width: 300px;
+    }
+}
+
+/* Responsif: Ponsel dan Lebih Kecil */
+@media screen and (max-width: 480px) {
+
+    /* Navbar */
+    .navbar h1 {
+        font-size: 18px;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar a {
+        font-size: 12px;
+    }
+
+    /* Tombol navbar */
+    .login-btn, .get-started-btn {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+
+    /* Hero Section */
+    .hero {
+        padding: 60px 20px;
+    }
+
+    .hero h2 {
+        font-size: 28px;
+    }
+
+    .hero h3 {
+        font-size: 24px;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+
+    .cta-btn {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    /* Trusted-by Section */
+    .logos img {
+        height: 250px;
+        width: 250px;
+    }
 }

@@ -1,96 +1,178 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RahmadPurba</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Gaya Umum untuk Bagian Hero */
+        .hero {
+            text-align: center;
+            padding: 50px;
+            position: relative;
+        }
 
-body {
-    font-family: Arial, sans-serif;
-    background-color: #3b82f6;
-    color: white;
-}
+        /* Kontainer Slideshow */
+        .image-mockup {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
 
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-}
+        /* Gaya untuk Setiap Slide */
+        .slider {
+            display: flex;
+            width: 300%; /* 3 gambar, jadi lebar 3 kali kontainer */
+            animation: slide 12s infinite;
+        }
 
-.navbar h1 {
-    font-size: 24px;
-}
+        .slide {
+            width: 100%;
+            flex: 0 0 100%;
+        }
 
-.navbar ul {
-    display: flex;
-    list-style: none;
-    gap: 20px;
-}
+        .slide img {
+            width: 100%;
+            height: auto;
+        }
 
-.navbar a {
-    color: white;
-    text-decoration: none;
-    font-size: 16px;
-}
+        /* Animasi untuk Sliding Gambar */
+        @keyframes slide {
+            0% { transform: translateX(0); }
+            33% { transform: translateX(-100%); }
+            66% { transform: translateX(-200%); }
+            100% { transform: translateX(0); }
+        }
 
-.login-btn, .get-started-btn {
-    padding: 10px 20px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-    color: #3b82f6;
-    background-color: white;
-    margin-left: 10px;
-    border-radius: 5px;
-}
+        /* Tombol Navigasi */
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            padding: 16px;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            background-color: rgba(0, 0, 0, 0.5);
+            border: none;
+            cursor: pointer;
+            user-select: none;
+            transition: background-color 0.3s;
+        }
 
-.hero {
-    text-align: center;
-    padding: 100px 20px;
-}
+        .prev {
+            left: 0;
+        }
 
-.hero h2 {
-    font-size: 48px;
-    margin-bottom: 20px;
-}
+        .next {
+            right: 0;
+        }
 
-.hero h3 {
-    font-size: 45px;
-    margin-bottom: 20px
-}
+        /* Efek Hover untuk Tombol */
+        .prev:hover, .next:hover {
+            background-color: rgba(0, 0, 0, 0.7);
+        }
 
-.hero p {
-    font-size: 18px;
-    margin-bottom: 30px;
-}
+        /* Responsif untuk Layar Kecil */
+        @media screen and (max-width: 768px) {
+            .hero {
+                padding: 30px;
+            }
 
-.cta-btn {
-    padding: 15px 30px;
-    font-size: 18px;
-    color: #3b82f6;
-    background-color: white;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-}
+            .cta-btn, .login-btn {
+                padding: 12px 24px;
+                font-size: 14px;
+            }
 
-.trusted-by {
-    text-align: center;
-    margin-top: 50px;
-}
+            .navbar h1 {
+                font-size: 24px;
+            }
 
-.trusted-by p {
-    font-size: 18px;
-    margin-bottom: 20px;
-}
+            .slider {
+                width: 300%; /* Sesuaikan lebar */
+            }
 
-.logos {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
+            .logos img {
+                width: 80%; /* Menyesuaikan ukuran logo untuk perangkat kecil */
+                margin: 10px 0;
+            }
+        }
 
-.logos img {
-    height: 400px;
-    width: 400px;
-}
+        /* Responsif untuk Layar Ponsel */
+        @media screen and (max-width: 480px) {
+            .hero {
+                padding: 20px;
+            }
+
+            .navbar h1 {
+                font-size: 20px;
+            }
+
+            .cta-btn, .login-btn {
+                padding: 10px 20px;
+                font-size: 12px;
+            }
+
+            .slider {
+                width: 400%; /* Sesuaikan untuk 4 gambar */
+            }
+
+            .logos img {
+                width: 70%; /* Ukuran logo lebih kecil */
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <h1>RahmadPurba.DORM</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">Nyaman</a></li>
+                    <li><a href="#">Aman</a></li>
+                    <li><a href="#">Damai</a></li>
+                    <li><a href="#">Bersih</a></li>
+                </ul>
+            </nav>
+            <a href="https://wa.me/+6282167621663"><button class="login-btn">Contact us</button></a>
+            <a href="https://maps.app.goo.gl/WeaKBJQKnY1mv98q6?g_st=iw"><button class="cta-btn">Maps</button></a>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h2>Mau Cari Kost Murah?</h2>
+            <h3>Disini Ajaaaa....</h3>
+            <p>Fasilitas Lengkap Dan Harga Terjangkau</p>
+            <button class="cta-btn">Pesan disini!</button>
+            <div class="image-mockup">
+                <!-- Kontainer Slideshow -->
+                <div class="slider">
+                    <div class="slide">
+                        <img src="image1.jpg" alt="Tampilan Depan Kost">
+                    </div>
+                    <div class="slide">
+                        <img src="image2.jpg" alt="Kamar Tidur Kost">
+                    </div>
+                    <div class="slide">
+                        <img src="image3.jpg" alt="Rooftop Kost">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="trusted-by">
+            <p>Tampilan halaman depan kost, kamar tidur, dan rooftop.</p>
+            <div class="logos">
+                <img src="logo1.png" alt="Company 1">
+                <img src="logo2.png" alt="Company 2">
+                <img src="logo3.png" alt="Company 3">
+            </div>
+        </section>
+    </main>
+</body>
+</html>

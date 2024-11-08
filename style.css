@@ -105,6 +105,15 @@ body {
 }
 
 /* Responsif: Tablet dan Lebih Kecil */
+@media (max-width: 1024px) {
+    .navbar {
+        flex-direction: column;
+    }
+
+    .main-content {
+        flex-direction: column;
+    }
+}
 @media screen and (max-width: 768px) {
 
     /* Navbar */

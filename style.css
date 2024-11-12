@@ -71,7 +71,7 @@ body {
 .hero {
     text-align: center;
     padding: 50px 20px;
-    background:image(images)
+    background-image: url(imagess.jpg);
 }
 
 

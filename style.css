@@ -104,6 +104,8 @@ body {
 }
 
 .trusted-by {
+    background-color: #edd996;
+    color: #333;
     text-align: center;
     padding: 40px 20px;
     background-image: url(imagess1.jpg);

@@ -106,6 +106,7 @@ body {
 .trusted-by {
     text-align: center;
     padding: 40px 20px;
+    background-image: url(imagess.jpg);
 }
 
 .trusted-by .logos {

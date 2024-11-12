@@ -103,7 +103,7 @@ body {
     margin-top: 20px;
 }
 
-.trusted-by {
+.trusted-by, p {
     background-color: #edd996;
     color: #333;
     text-align: center;
